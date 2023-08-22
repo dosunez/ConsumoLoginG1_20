@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro/visualizacion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/JavaScript/login.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="consulta mt6">
+             <div class="row">
+                   <div class="col-6">
+                       <h3>
+                          Lista de Usuarios
+                       </h3>
+                   </div>
+                  
+                   <a href="../Home.html"><input type="button" class="btn btn-info" value="Atras"></a>
+
+
+                   <div class="box-body">
+                       <div class="table table-responsive">
+                            <table class="table table-hover">
+                                 <thead>
+                                      <tr>
+                                          <th>Codigo</th>
+                                          <th>Nombre</th>
+                                          <th>Apellido</th>
+                                          <th>Clave</th>
+                                          <th>Email</th>
+                                          <th>Estado</th>
+                                          <th>F_Ingreso</th>
+                                          <th>Clave expira</th>
+                                          <th>Caducidad clave</th>
+                                          <th>Rol</th>
+                                          <th>Intentos incorrectos</th>
+                                          <th>F_registro</th>
+                                      </tr>
+                                 </thead>
+                                 <tbody id="Login">
+
+                                      
+                                     
+
+                                 </tbody>
+                              </table>
+                       </div>
+
+                   </div>
+             </div>
+
+
+
+        </div>
+
+
+        
+        <div id="Formulario" class="Formulario mt6">
+            <div class="rows">
+                 <div class="col-12">
+                       <h3>
+                           Agregar Usuarios
+                       </h3>
+
+                 </div>
+             </div>
+             <div class="col-12">
+                  <form id="Miformulario" class = "login">
+                      <label for="">Codigo usuario</label>
+                      <input type="text" id="codigo_usuario" class="form-control" placeholder="Ingrese numero de Cuenta">
+
+                      <label for="">Nombre</label>
+                      <input type="text" id="nombre" class="form-control" placeholder="Ingrese el Nombre">
+
+                      <label for="">Apellido</label>
+                      <input type="text" id="apellido" class="form-control" placeholder="Ingrese el Apellido">
+
+                      <label for="">Clave o Contraseña</label>
+                       <input type="password" id="password" class="form-control" placeholder="Ingrese Contraseña">
+
+                      <label for="">Email</label>
+                      <input type="text" id="email" class="form-control" placeholder="Ingrese Email">
+                      <br>
+                      
+                      <label for="">Estado</label>
+                      <!-- <input type="text" id="direccion" class="form-control" placeholder="Ingrese estado"> -->
+                      <select id="estado" name="status">
+                        <option value="True">Activo</option>
+                        <option value="False">Inactivo</option>
+                      </select><br></br>
+
+                      <label for="">Ultima fecha ingreso</label>
+                      <input type="date" id="fecha_hora_ingreso" class="form-control">
+                      <br>
+
+                      <label for="">Clave expira</label>
+                      <!-- <input type="text" id="carrera" class="form-control" placeholder="Ingrese la Carrera">-->
+                     <select id="password_expira" name="status" >
+                        <option value="True">Activo</option>
+                        <option value="False">Inactivo</option>
+                      </select><br></br>
+                      
+                      <label for="">Dias de caducidad</label>
+                      <input type="number" id="dias_caducidad" class="form-control" placeholder="Seleccione Dias">
+                      
+                      <label for="">Rol</label>
+                      <input type="text" id="rol" class="form-control" placeholder="Ingrese Rol">
+                      
+                      <label for="">Intentos incorrectos</label>
+                      <input type="number" id="numero_intentos_incorrectos" class="form-control" placeholder="Ingrese Intentos Permitidos">
+                      
+                      <label for="">Fecha registro</label>
+                      <input type="date" id="fecha_registro" class="form-control">
+                      
+                      <hr>
+                      <div id="btnagregarlogin">
+                       <input type="button" value="Agregar" class="btn btn-success" id="btnagregar" onclick="agregar()">
+                      </div>
+
+                       
+                      
+                      
+                      
+                  </form>
+             </div>
+
+        </div>
+
+   </div>
+
+
+     
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+</body>
+</html>
